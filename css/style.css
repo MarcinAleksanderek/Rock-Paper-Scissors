@@ -1,0 +1,92 @@
+body {
+  padding: 10px;
+  text-align: center;
+  background: #daecf3;
+}
+
+button {
+  display: inline-block;
+  margin: 15px;
+  width: 160px;
+  height: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: #fff;
+  background-color: #02ac46;
+  border: 2px solid #02ac46;
+  border-radius: 4px;
+  transition: color .3s, background-color .3s;
+  cursor: pointer;
+  outline: 0 !important;
+  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+button:hover, button:active {
+  color: #02ac46;
+  background-color: #fff;
+}
+
+.newGameButton {
+  height: 100px;
+  width: 300px;
+  font-size: 18px;
+}
+
+.game {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.left-menu {
+  float: left;
+  width: 180px;
+}
+
+.scisor {
+  background-color: inherits;
+  left: -60px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.fullPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.selection {
+  position: relative;
+  -webkit-animation-name: example;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 1.5s;
+}
+
+/* Standard syntax */
+@keyframes example {
+  0% {
+    left: 0;
+    top: 30px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+    opacity: 1;
+  }
+}

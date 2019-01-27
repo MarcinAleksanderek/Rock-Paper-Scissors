@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scisors- Game</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="game" class="hide game">
+  <div class="left-menu">
+    <h3>Select Your next move:</h3>
+    <button onclick="playerMove(this.id)" id="paper"><img class="scisor" src="http://www.orbiter.vot.pl/scisorsgame/paper.png"><br>Paper</button>
+    <button class="scisor" onclick="playerMove(this.id)" id="scisors"><img class="scisor" src="http://www.orbiter.vot.pl/scisorsgame/scissors.png"><br>Scisors</button>
+    <button onclick="playerMove(this.id)" id="rock"><img class="scisor" src="http://www.orbiter.vot.pl/scisorsgame/rock.png"><br>Rock</button>
+  </div>
+  <div>
+    <h1>SCORE:</h1>
+    <div id='scoreTable'></div>
+    <h1 id="currentStatus"></h1>
+  </div>
+  <div id="output"></div>
+</div>
+<div id="newGame" class="fullPage show">
+  <h1 id='winLooseDialog'></h1>
+  <button class='newGameButton' onclick="startGame()">Start New Game</button>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
