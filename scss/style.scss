@@ -2,6 +2,7 @@ body {
     padding: 10px;
     text-align: center;
     background: #daecf3;
+    font-family: 'Roboto', sans-serif;
 }
 
 button {
@@ -9,9 +10,7 @@ button {
     margin: 15px;
     width: 160px;
     height: 160px;
-    
     font-size: 16px;
-    font-weight: 600;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -40,6 +39,21 @@ button {
   width: 300px;
   font-size: 18px;
 }
+
+.startGameButton{
+  height: 50px;
+  width: 200px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+input {
+  height: 50px;
+  width: 300px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
 
 .game{
   max-width: 900px;
@@ -84,4 +98,60 @@ button {
 @keyframes example {
   0%   {left:0; top:30px; opacity:0;}
   100% {left:0; top:0; opacity:1;}
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	justify-content: center;
+	align-items: center;
+	overflow: auto;
+	padding: 30px;
+	display: none;
+	
+	&.show {
+		display: flex;
+	}
+	
+	.modal {
+		margin: auto;
+		background-color: #ffffff;
+		position: relative;
+    padding: 30px;
+    width: 50%;
+    display: none;
+		&.show {
+			display: block;
+		}
+		.btn-close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 5px 10px;
+		}
+	}
+}
+	
+.overlay::webkit-scrollbar {
+	display: none;
+}
+
+.full {
+  width: 100%;
+  tr {
+    border-top: 1px solid hsl(135, 33%, 78%);
+    border-bottom: 1px solid hsl(135, 33%, 78%);
+    &:hover {
+      background: hsl(135, 33%, 78%);
+    }
+  }
+  th {
+    font-weight: bold;
+    background: hsl(135, 33%, 78%);
+  }
 }

@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" >
-
 <head>
   <meta charset="UTF-8">
   <title>Rock Paper Scisors- Game</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-
 <body>
-
   <div id="game" class="hide game">
-  <div class="left-menu">
-    <h3>Select Your next move:</h3>
-    <button onclick="playerMove(this.id)" id="paper"><img class="scisor" src="http://www.orbiter.vot.pl/scisorsgame/paper.png"><br>Paper</button>
-    <button class="scisor" onclick="playerMove(this.id)" id="scisors"><img class="scisor" src="http://www.orbiter.vot.pl/scisorsgame/scissors.png"><br>Scisors</button>
-    <button onclick="playerMove(this.id)" id="rock"><img class="scisor" src="http://www.orbiter.vot.pl/scisorsgame/rock.png"><br>Rock</button>
-  </div>
-  <div>
-    <h1>SCORE:</h1>
-    <div id='scoreTable'></div>
-    <h1 id="currentStatus"></h1>
-  </div>
-  <div id="output"></div>
+	  <div class="left-menu">
+		<h3>Select Your next move:</h3>
+		<button class="player-move"  onclick="playerMove(this.id)" id="paper"><img class="scisor" src="http://www.orbiter.vot.pl/scisorsgame/paper.png"><br>Paper</button>
+		<button class="player-move" onclick="playerMove(this.id)" id="scissors"><img class="scisor" src="http://www.orbiter.vot.pl/scisorsgame/scissors.png"><br>Scissors</button>
+		<button class="player-move" onclick="playerMove(this.id)" id="rock"><img class="scisor" src="http://www.orbiter.vot.pl/scisorsgame/rock.png"><br>Rock</button>
+	  </div>
+	  <div>
+		<h1>SCORE</h1>
+		<div id='scoreTable'></div>
+		<h1 id="currentStatus"></h1>
+	  </div>
+	  <div id="output"></div>
 </div>
 <div id="newGame" class="fullPage show">
-  <h1 id='winLooseDialog'></h1>
-  <button class='newGameButton' onclick="startGame()">Start New Game</button>
+    
+		<button class='newGameButton' onclick="togleView(1)">Start New Game</button>
 </div>
-  
-  
+<div id="gameParams" class="fullPage hide">
+	<h3 id='winLooseDialog'>Up to how many WINS would You like to play?</h3>
+	<input type="text" id="initialInput"/><button class='startGameButton' onclick="startGame()">Let's Start!!</button>
+	<h3 id="validation"></h3>
+</div>
 
-    <script  src="js/index.js"></script>
 
+<div class="overlay js--close-modal" id="overlay">
+	<div class="modal" id="scoreView">
+		<div class="btn-close js--close-modal">x</div>
+		<h3 id="modalHeader"></h3>
+		<div id="modalBody" class="modal-body">
+			
+		</div>
+	</div>
+</div>
 
-
-
+<script  src="js/index.js"></script>
 </body>
-
 </html>
