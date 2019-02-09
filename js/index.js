@@ -15,14 +15,14 @@ var moves = {};
 function playerMove(iD) {
   console.log(iD);
   params.compSelection = getRandom();
-  if(((iD=='paper') && (params.compSelection=='rock')) || ((iD=='rock') && (params.compSelection=='scisors')) || ((iD=='scisors') && (params.compSelection=='paper'))) {
+  if(((iD=='paper') && (params.compSelection=='rock')) || ((iD=='rock') && (params.compSelection=='scissors')) || ((iD=='scissors') && (params.compSelection=='paper'))) {
      params.playerScore++;
   }
   else if(iD==params.compSelection) {}
   else {
     params.compScore++;
   }
-  params.table = params.table + '<tr><td>' + params.roundCount + '</td><td>' + iD +'</td><td>' + params.compSelection + '</td><td>' +params.playerScore + ' : ' + params.compScore+'</td></tr>'
+  params.table = params.table + '<tr><td>' + params.roundCount + '</td><td>' + iD +'</td><td>' + params.compSelection + '</td><td>' +params.playerScore + ' : ' + params.compScore +'</td></tr>'
   params.roundCount = params.roundCount + 1;
   writeOutput((updateImage(iD)+' '+updateImage(params.compSelection)+'<br>You selected : ' + iD + ' computer choose: '+ params.compSelection), 'output');
   writeOutput(('Player: ' +params.playerScore + '<br>Computer: ' + params.compScore + '<br>'),  'currentStatus');
@@ -81,6 +81,8 @@ function startGame() {
 function showFinishModal(winLose, message) {
   modalHeader.innerHTML = 'You ' + winLose + ' ' + message;
   params.table = params.table + '</table>'
+  inputNumber.value = '';
+  inputNumber.text = '';
   modalBody.innerHTML = params.table;
   togleView(3);
   openModal('#scoreView');
