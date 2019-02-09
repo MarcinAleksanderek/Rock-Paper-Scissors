@@ -60,7 +60,10 @@ function updateImage (selection) {
 
 function startGame() {
   if(isNaN(inputNumber.value)) {
-    validationInfo.innerHTML ='<br>Please provide correct NUMBER!!';
+    validationInfo.innerHTML ='Please provide correct NUMBER!!';
+  }
+  else if(inputNumber.value == '') {
+    validationInfo.innerHTML ='Please provide NUMBER!!';
   }
   else {
       validationInfo.innerHTML = '';
